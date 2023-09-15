@@ -1,0 +1,14 @@
+.pricing-board {
+    .pricing-list {
+        @apply bg-white py-[15px] text-home-text text-center border-[#ddd] px-[5px];
+    }
+
+    button {
+        @apply text-white bg-flexblue rounded px-[30px] py-[15px] text-[13px] font-medium border-[2px] border-flexblue;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            @apply bg-white text-flexblue;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.sidebar {
+    @apply w-[270px] min-w-[270px] bg-blue text-white px-[20px] py-[10px] fixed top-0 overflow-auto;
+    height: calc(100% - 40px);
+    min-height: calc(100vh - 40px);
+    transition: left 0.3s ease-in-out;
+    
+    .sidebar-menu {
+        @apply w-full flex flex-col justify-between items-center;
+        min-height: calc(100vh - 7rem);
+
+        >div {
+            @apply w-full py-[15px];
+
+            ul {
+                @apply w-full;
+
+                li {
+                    @apply flex items-center;
+
+                    svg {
+                        @apply w-[25px] text-[20px] mr-[5px];
+                    }
+
+                    a, span {
+                        @apply px-[10px] py-[10px] rounded text-[14px];
+                        width: calc(100% - 25px);
+
+                        &:hover {
+                            @apply bg-hoverblue cursor-pointer;
+                        }
+
+                        svg {
+                            @apply text-[14px] mr-0;
+                        }
+                    }
+
+                    ul {
+                        @apply pl-[40px] text-[14px] overflow-hidden;
+                        transition: height 0.2s ease-in-out;
+
+                        li {
+                            @apply cursor-pointer hover:bg-hoverblue rounded;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hamburger-line {
+    @apply block absolute h-[3px] w-[25px] bg-white transform transition duration-300 ease-in-out;
+}
+
+.logout-popup-content {
+    width: 230px !important;
+    padding: 0 !important;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

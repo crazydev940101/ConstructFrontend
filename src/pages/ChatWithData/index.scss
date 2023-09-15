@@ -1,0 +1,22 @@
+.chatbot-page {
+    text-align: -webkit-center;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.input-chat-data {
+    background-color: white;
+    position: fixed;
+    bottom: 0rem;
+    z-index: 10;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    @media (max-width: 576px) {
+        bottom: 0rem;
+    }
+}
+
+.input-chat-data div div {
+    background-color: white;
+}

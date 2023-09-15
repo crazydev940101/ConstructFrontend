@@ -1,0 +1,13 @@
+.section-content {
+    h2 {
+        @apply text-flexblue text-[28px] sm:text-[30px] leading-[1.3] sm:leading-[1.6] font-bold tracking-[1px];
+    }
+
+    p {
+        @apply text-home-text text-[15px] my-[15px] tracking-[0.5px];
+    }
+
+    a {
+        @apply text-flexblue my-[10px] font-bold text-[15px];
+    }
+}

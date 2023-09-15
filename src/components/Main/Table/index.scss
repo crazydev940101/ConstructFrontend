@@ -1,0 +1,123 @@
+.main-table {
+    @apply w-full;
+
+    .t-header, .t-body .t-content {
+        @apply min-w-[1200px] border-b-[3px] pl-[10px] flex items-center;
+
+        .span {
+            @apply text-[14px] font-medium p-[14px] text-gray-900 leading-[20px];
+        }
+
+        .span-child {
+            @apply text-[14px] font-normal text-gray-500 p-[14px] leading-[20px];
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &:hover {
+                overflow: visible;
+            }
+
+            svg {
+                @apply text-grey;
+            }
+            
+            &:hover {
+                svg {
+                    @apply text-gray-900;
+                }
+            }
+        }
+
+        // Company
+        &>span:nth-child(1){
+            @apply w-[8%] min-w-[120px] pl-0;
+        }
+    
+        // Type
+        &>span:nth-child(2){
+            @apply w-[11%] min-w-[120px] pl-0;
+        }
+
+        // Name
+        &>span:nth-child(3){
+            @apply w-[22%] min-w-[150px];
+        }
+
+        // Project ID
+        &>span:nth-child(4){
+            @apply w-[20%] min-w-[150px];
+        }
+
+        // Extraction ID
+        &>span:nth-child(5){
+            @apply w-[10%] min-w-[100px];
+        }
+
+        // Date Created
+        &>span:nth-child(6){
+            @apply w-[12%] min-w-[120px];
+        }
+
+        // Number of Documents
+        &>span:nth-child(7){
+            @apply w-[9%] min-w-[110px];
+        }
+
+        // Status
+        &>span:nth-child(8){
+            @apply w-[2%] min-w-[120px];
+        }
+
+        // Download
+        &>span:nth-child(9){
+            @apply w-[7%] min-w-[100px] flex justify-center items-center cursor-pointer text-center;
+        }
+
+        // Delete
+        &>span:nth-child(10){
+            @apply w-[7%] min-w-[80px] flex justify-center items-center cursor-pointer text-center;
+        }
+    }
+}
+
+.select {
+    position: relative;
+    display: inline-flex;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    padding: 10px 14px;
+    color: #0d6efd;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.position {
+    text-align: center;
+    padding-top: 33px;
+}
+
+@media screen and (max-width:576px) {
+    .select {
+        display: inline-flex;
+        border: 1px solid #dee2e6;
+        background-color: #ffffff;
+        padding: 11px 0px;
+        color: #0d6efd;
+        font-size: 11px;
+        font-weight: 500;
+        width: 40px;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+        cursor: pointer;
+        float:left;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+}

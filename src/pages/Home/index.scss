@@ -1,0 +1,11 @@
+.container {
+    @apply w-full max-w-[1180px] mx-auto;
+}
+
+.smart-transition {
+    @apply transition-all duration-200 ease-in-out;
+}
+
+.section-title {
+    @apply text-center mt-[10px] sm:pt-[50px] mt-0 font-extra text-[36px] sm:text-[46px];
+}

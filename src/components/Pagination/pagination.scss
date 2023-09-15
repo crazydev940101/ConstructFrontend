@@ -1,0 +1,177 @@
+.pagination-container {
+    list-style-type: none;
+    padding:10px;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    
+    box-sizing: border-box;
+    width: auto;
+    
+    .mobile-display {
+      display: none;
+    }
+    .pagination-item {
+      
+      width: auto;
+      position: relative;
+      display: inline-flex;
+      border: 1px solid #dee2e6;
+      background-color: #ffffff;
+      padding: 10px 14px;
+      color: #0d6efd;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+      cursor: pointer;
+  
+      &.dots:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+      &:hover {
+        // background-color: rgba(0, 0, 0, 0.04);
+        // cursor: pointer;
+        background: #0040c1;
+        color: #fff;
+      }
+  
+      &.selected {
+        background-color: #0040c1;
+        border-color: #0040c1;
+        color:white;
+        // background: #0040c1;
+        // color: #fff;
+      }
+  
+      .arrow {
+        &::before {
+          position: relative;
+          /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+          content: '';
+          /* By using an em scale, the arrows will size with the font */
+          display: inline-block;
+          width: 0.4em;
+          height: 0.4em;
+          border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+          border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+        }
+  
+        &.left {
+          transform: rotate(-135deg) translate(-50%);
+        }
+  
+        &.right {
+          transform: rotate(45deg);
+        }
+      }
+  
+      &.disabled {
+        pointer-events: none;
+  
+        .arrow::before {
+          border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+          border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+        }
+  
+        &:hover {
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .pagination-container {
+      list-style-type: none;
+      padding:10px 0px;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      width: auto;
+      
+      .mobile-display {
+        display: inline-flex;
+        border: 1.5px solid #dee2e6;
+        background-color: #ffffff;
+        padding:9px 9px;
+        font-weight: 500;
+        font-size: 11.5px;
+        text-align: center;
+        width: 90px;
+      }
+    
+      .pagination-item {
+        
+        width: auto;
+        position: relative;
+        display: none;
+        border: 1px solid #dee2e6;
+        background-color: #dee2e6;
+        padding:9px 13px;
+        color: #0d6efd;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+        cursor: pointer;
+    
+        &.dots:hover {
+          background-color: transparent;
+          cursor: default;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+          cursor: pointer;
+        }
+        &.lastpage {
+          display: inline-flex;
+        }
+
+        &.firstpage {
+          display: inline-flex;
+        }
+
+        .arrow {
+          &::before {
+            position: relative;
+            /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+            content: '';
+            /* By using an em scale, the arrows will size with the font */
+            display: inline-block;
+            width: 0.4em;
+            height: 0.4em;
+            border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+            border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+          }
+    
+          &.left {
+            transform: rotate(-135deg) translate(-50%);
+          }
+    
+          &.right {
+            transform: rotate(45deg);
+          }
+        }
+    
+        &.disabled {
+          pointer-events: none;
+          display: inline-flex;
+    
+          .arrow::before {
+            border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+            border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+          }
+    
+          &:hover {
+            background-color: transparent;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  

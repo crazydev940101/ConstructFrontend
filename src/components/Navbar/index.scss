@@ -1,0 +1,18 @@
+nav{
+    z-index: 995;
+    a {
+        letter-spacing: 1px;
+    }
+
+    .hamburger-line {
+        @apply block absolute h-[3px] w-[25px] bg-white transform transition duration-300 ease-in-out
+    }
+}
+
+.mobile-menu {
+    transition: all 0.2s ease-in-out;
+
+    li {
+        @apply py-[12px] font-medium text-[14px] hover:bg-white hover:shadow-lg hover:border-transparent hover:text-black px-[20px]
+    }
+}

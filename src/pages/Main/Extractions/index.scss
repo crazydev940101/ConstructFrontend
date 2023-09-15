@@ -1,0 +1,23 @@
+.detail {
+    @apply flex flex-col justify-center items-start gap-[10px] text-[14px] text-gray-700;
+
+    >div {
+        @apply flex items-baseline;
+    }
+
+    input {
+        @apply w-[150px] border-[1px] border-gray-300 focus:border-gray-600 outline-none px-[5px] py-[3px] text-[12px];
+    }
+}
+
+.tab {
+    @apply flex gap-[25px] text-gray-700 font-normal text-[16px];
+
+    >div {
+        @apply cursor-pointer;
+
+        &.active {
+            @apply text-blue border-b-[2px] border-b-blue pb-[5px];
+        }
+    }
+}

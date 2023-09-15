@@ -1,0 +1,16 @@
+.team-popup-content {
+  width: 400px !important;
+  padding: 0 !important;
+
+  &:hover {
+      cursor: pointer;
+  }
+
+  .team-popup-arrow {
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    width: 250px !important;
+  }
+}

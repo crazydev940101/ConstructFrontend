@@ -1,0 +1,20 @@
+.flex-center {
+    @apply justify-center items-center;
+}
+
+.absolute-center {
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+}
+
+.main-board{
+    @apply ml-0 lg:ml-[270px] w-full pl-[20px] lg:pl-[30px] pt-[70px] lg:pt-[60px] pb-[60px] pr-[20px];
+    width: calc(100vw - 270px);
+
+    @media (max-width: 1024px) {
+        width: 100vw;
+    }
+}
+
+.modal {
+    transition: top 0.2s ease-in-out;
+}

@@ -1,0 +1,104 @@
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -800px;
+    /* start offscreen */
+    width: 800px;
+    height: 100%;
+    background-color: #ccc;
+    transition: right 0.3s ease-in-out;
+
+    @media (max-width: 1024px) {
+        right: -800px;
+        /* start offscreen */
+        padding: 30px 30px 120px 30px;
+        top: 50px;
+
+    }
+}
+
+.drawer.show {
+    right: 0;
+
+    /* slide in */
+    @media (max-width: 1024px) {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+    }
+}
+
+@mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: relative;
+    width: $size;
+    height: $size;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: ($size - $thickness) / 2;
+        left: 0;
+        right: 0;
+        height: $thickness;
+        background: $color;
+        border-radius: $thickness;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+
+    span {
+        display: block;
+    }
+
+}
+
+// Example 1.
+.btn-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 30px;
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 150ms;
+
+    .icon-cross {
+        @include cross(20px, #fff, 3px);
+    }
+
+    &:hover,
+    &:focus {
+        transform: rotateZ(90deg);
+        background: hsl(216, 100, 40);
+    }
+
+}
+
+// For screen readers.
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}

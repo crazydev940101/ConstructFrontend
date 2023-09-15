@@ -1,0 +1,21 @@
+.social-auth-btn{
+    @apply relative bg-blue w-full py-[12px] rounded text-white font-normal hover:bg-hoverblue;
+
+    img {
+        @apply h-[40px] w-auto absolute left-[20px] top-[50%] translate-y-[-50%];
+    }
+}
+
+.auth-form {
+    input {
+        @apply w-full border-[3px] px-[15px] py-[10px] my-[5px] text-[20px] font-normal rounded-lg;
+    }
+
+    a {
+        @apply text-lightblue;
+    }
+}
+
+.error-text {
+    @apply text-red-600 pl-[5px];
+}

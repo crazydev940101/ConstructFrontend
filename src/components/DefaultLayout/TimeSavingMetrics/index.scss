@@ -1,0 +1,16 @@
+.metrics-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+    --tw-text-opacity: 1;
+    margin-bottom: auto;
+    color: rgb(129 158 210 / var(--tw-text-opacity));
+}
+
+.metrics-detail > div {
+    display: flex;
+    align-items: baseline;
+}

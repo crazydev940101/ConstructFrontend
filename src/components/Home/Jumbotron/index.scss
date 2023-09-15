@@ -1,0 +1,13 @@
+.jumbotron {
+    background-image: url('../../../assets/img/jumbotron-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    p {
+        letter-spacing: 0.5px;
+    }
+
+    .start-btn {
+        @apply text-[17px] font-medium bg-white text-flexblue rounded-md py-[13px] px-[21px] border-[2px] border-white hover:bg-transparent hover:text-white;
+    }
+}

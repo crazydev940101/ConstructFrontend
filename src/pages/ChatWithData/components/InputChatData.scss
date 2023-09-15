@@ -1,0 +1,68 @@
+.input-chat-data {
+    @media (min-width: 640px) and (max-width: 800px) {
+        padding-left: 20px;
+        // margin-left: 0px !important;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 566px;
+        // width: -webkit-fill-available;
+    }
+
+    @media (max-width: 640px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: -webkit-fill-available;
+        margin-left: 0px !important;
+    }
+}
+
+.w-full-chat-data {
+    width: 566px;
+    height: 45px;
+    font-size: 18px;
+    padding: 8px;
+
+    @media (min-width: 361px) and (max-width: 800px) {
+        width: -webkit-fill-available;
+    }
+
+    @media (max-width: 360px) {
+        width: -webkit-fill-available;
+        height: 35px;
+        font-size: 17px;
+        padding: 4px;
+    }
+}
+
+.w-full-chat-data::placeholder {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.input-chat-data .input-chat-border-solid {
+    border: 4px solid #e2e2e2;
+    border-radius: 0.8rem;
+    background-color: white;
+    // border: 4px solid #0040c1;
+}
+
+.input-chat-data .input-chat-border-solid:hover {
+    border: 4px solid #0040c1;
+}
+
+.upload-link svg {
+    font-size: 20px;
+}
+
+.input-chat-border-solid {
+    border: 2px solid lightgrey;
+    /* Set the initial border on the parent container */
+    transition: border-color 0.3s ease;
+    /* Add a transition for a smooth color change */
+}
+
+.input-chat-border-solid:focus-within {
+    border-color: #0040c1;
+    /* Change the border color when any child element is focused */
+}

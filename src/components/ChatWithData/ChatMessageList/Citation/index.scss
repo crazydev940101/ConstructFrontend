@@ -1,0 +1,16 @@
+.card-body-source {
+    background-color: #B2DBFB;
+    border-radius: 5px;
+    // border: 2px solid #f0f0f0;
+}
+
+.card-body-source p {
+    text-align: left;
+    --tw-bg-opacity: 1;
+    color: rgb(0 64 193 / var(--tw-bg-opacity));
+}
+
+.card-body-source:hover {
+    background-color: #f0f0f0;
+    // border: 2px solid black;
+}

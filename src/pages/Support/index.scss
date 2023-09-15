@@ -1,0 +1,17 @@
+.rpt-textbox-container {
+  width: 500px !important;
+
+  @media (max-width: 640px){
+    width: 400px !important;
+  }
+
+  @media (max-width: 480px){
+    width: 250px !important;
+  }
+}
+
+.rpt-container {
+  @media (max-width: 640px){
+    left: 30% !important;
+  }
+}
